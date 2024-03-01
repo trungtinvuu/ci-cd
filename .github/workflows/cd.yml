@@ -1,25 +1,3 @@
-# name: CD
-
-# on:
-#   push:
-#     branches: [ develop ]
-
-# jobs:
-#   build:
-
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - run: echo ${{ secrets.HOST }}
-#     - name: Deploy using ssh
-#       uses: appleboy/ssh-action@master
-#       with:
-#         host: ${{secrets.HOST}}
-#         username: ${{secrets.USER}}
-#         key: ${{ secrets.PRIVATEY }}
-#         passphrase: ${{ secrets.PASS }}
-#         port: 22
-
 name: CD
 
 on:
@@ -33,8 +11,7 @@ jobs:
     - name: Deploy
       uses: appleboy/ssh-action@master
       with:
-        username: ${{secrets.USER}}
-        host: ${{secrets.HOST}}
-        key: ${{ secrets.PRIVATEY }}
-        password: ${{ secrets.PASS }}
-        port: 22
+        username: root
+        host: 139.162.4.59
+        password: a922830A.bl
+        script: 'cd /var/www/html'
