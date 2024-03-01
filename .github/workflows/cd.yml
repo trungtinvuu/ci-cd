@@ -30,7 +30,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to <your domain>
+    - name: Deploy
       uses: appleboy/ssh-action@master
       with:
         username: ${{secrets.USER}}
