@@ -9,6 +9,7 @@ on:
     workflows: ["CI"]
     types:
       - completed
+      - requested
 
 jobs:
   deploy:
