@@ -23,5 +23,10 @@ jobs:
       run: php -l index.php || exit 1
 
     - name: Deploy to Production
-      run: |
-        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} root@139.162.4.59 'echo "Deployment successful"'
+      uses: appleboy/ssh-action@master
+      with:
+        host: 139.162.4.59
+        username: root
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          echo "Deployment Successful"
