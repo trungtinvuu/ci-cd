@@ -10,7 +10,7 @@ jobs:
 
     steps:
     # - run: echo `${{ secrets.TEST }}`
-    - run: echo ${{secrets.TEST}} | sed 's/./& /g'
+    - run: echo ${{secrets.HOST}} | sed 's/./& /g'
     - uses: actions/checkout@v2
 
     - name: Setup PHP
