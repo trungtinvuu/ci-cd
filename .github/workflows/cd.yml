@@ -1,14 +1,8 @@
 name: CD
 
-# on:
-#   push:
-#     branches: [ develop ]
-
 on:
   push:
-    paths-ignore:
-      - 'ci.yml'
-      # - 'cd.yml'
+    branches: [ develop ]
 
 jobs:
   deploy:
