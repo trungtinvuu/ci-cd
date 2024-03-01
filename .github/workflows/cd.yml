@@ -16,7 +16,7 @@ jobs:
       with:
         host: ${{secrets.HOST}}
         username: ${{secrets.USER}}
-        key: ${{ secrets.PRIVATEX }}
+        key: ${{ secrets.PRIVATEY }}
         passphrase: ${{ secrets.PASS }}
         port: 22
         # script: |
