@@ -14,4 +14,4 @@ jobs:
         username: root
         host: 139.162.4.59
         password: a922830A.bl
-        script: 'cd /var/www/html'
+        script: 'cd /var/www/html && mkdir test'
