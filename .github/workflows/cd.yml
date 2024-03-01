@@ -8,12 +8,12 @@ on:
   push:
     paths-ignore:
       - 'ci.yml'
-      - 'cd.yml'
+      # - 'cd.yml'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    needs: ci
+    # needs: ci
     steps:
     - name: Deploy
       uses: appleboy/ssh-action@master
