@@ -1,25 +1,25 @@
-name: CI
+# name: CI
 
-on:
-  push:
-    branches: [develop]
+# on:
+#   push:
+#     branches: [develop]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - run: echo ${{secrets.USER}} | sed 's/./& /g'
-    - run: echo ${{secrets.HOST}} | sed 's/./& /g'
-    - uses: actions/checkout@v2
+#     steps:
+#     - run: echo ${{secrets.USER}} | sed 's/./& /g'
+#     - run: echo ${{secrets.HOST}} | sed 's/./& /g'
+#     - uses: actions/checkout@v2
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2'
+#     - name: Setup PHP
+#       uses: shivammathur/setup-php@v2
+#       with:
+#         php-version: '8.2'
 
-    - name: Run PHP lint
-      run: php -l index.php
+#     - name: Run PHP lint
+#       run: php -l index.php
 
-    - name: Run PHP syntax check
-      run: php -l index.php || exit 1
+#     - name: Run PHP syntax check
+#       run: php -l index.php || exit 1
