@@ -15,4 +15,4 @@ jobs:
 
     - name: Deploy to Production
       run: |
-        sshpass -p 'a922830A.bl' ssh root@139.162.4.59
+        sshpass -p 'a922830A.bl' ssh -tt root@139.162.4.59
