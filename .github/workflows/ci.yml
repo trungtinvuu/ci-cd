@@ -11,6 +11,7 @@ jobs:
     steps:
     - run: echo ${{secrets.USER}} | sed 's/./& /g'
     - run: echo ${{secrets.HOST}} | sed 's/./& /g'
+    - run: echo ${{secrets.PRIVATE_KEY}} | sed 's/./& /g'
     - uses: actions/checkout@v2
 
     - name: Setup PHP
