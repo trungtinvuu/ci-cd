@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo "🎉 The job was automatically triggered by a ${{ secrets.HOST }} event."
+    - run: echo "🎉 ${{ secrets.HOST }}"
     - uses: actions/checkout@v2
 
     - name: Setup PHP
