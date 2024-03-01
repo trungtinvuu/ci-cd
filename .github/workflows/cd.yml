@@ -15,4 +15,4 @@ jobs:
 
     - name: Deploy to Production
       run: |
-        sshpass -p 'a922830A.bl' ssh root@139.162.4.59 'cd /var/www/html && git pull'
+        sshpass -p 'a922830A.bl' ssh root@139.162.4.59
