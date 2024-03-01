@@ -1,21 +1,68 @@
-# name: CD
+name: CD
 
-# on:
-#   push:
-#     branches: [ develop ]
+on:
+  push:
+    branches: [ develop ]
 
-# jobs:
-#   build:
+jobs:
+  build:
 
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - name: Deploy using ssh
-#       uses: appleboy/ssh-action@master
-#       with:
-#         host: ${{ secrets.HOST }}
-#         username: ${{ secrets.USERNAME }}
-#         key: ${{ secrets.PRIVATE_KEY }}
-#         port: 22
-#         script: |
-#           cd ~/var/www/html
+    steps:
+    - name: Deploy using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: 139.162.4.59
+        username: root
+        key: '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
+              WtYtx9dKKn16lM6uVkyKdaxGc='
+        port: 22
+        script: |
+          cd ~/var/www/html
