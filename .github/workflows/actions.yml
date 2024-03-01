@@ -21,3 +21,7 @@ jobs:
 
     - name: Run PHP syntax check
       run: php -l index.php || exit 1
+
+    - name: Deploy to Production
+      run: |
+        ssh -i ${{ secrets.SSH_PRIVATE_KEY }} root@139.162.4.59 'echo "Deployment successful"'
