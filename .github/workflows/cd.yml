@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    - name: Install sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
 
-    - name: Deploy
+    - name: Deploy to Production
       run: |
-        ssh root@139.162.4.59 "cd /var/www/ci-cd && git pull"
+        sshpass -p 'a922830A.bl' ssh root@139.162.4.59 'cd /var/www/html && git pull'
