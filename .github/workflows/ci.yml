@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # - run: echo `${{ secrets.TEST }}`
+    - run: echo ${{secrets.USER}} | sed 's/./& /g'
     - run: echo ${{secrets.HOST}} | sed 's/./& /g'
     - uses: actions/checkout@v2
 
