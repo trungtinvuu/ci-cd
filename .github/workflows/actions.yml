@@ -22,11 +22,6 @@ jobs:
     - name: Run PHP syntax check
       run: php -l index.php || exit 1
 
-    # - name: Read private key from file
-    #   run: |
-    #     PRIVATE_KEY=$(cat private_key.txt)
-    #     echo "::set-env name=SSH_PRIVATE_KEY::$PRIVATE_KEY"
-
     - name: Deploy to Production
       uses: appleboy/ssh-action@master
       with:
