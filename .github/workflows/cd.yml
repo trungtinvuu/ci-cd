@@ -35,5 +35,6 @@ jobs:
       with:
         username: ${{secrets.USER}}
         host: ${{secrets.HOST}}
+        key: ${{ secrets.PRIVATEY }}
         password: ${{ secrets.PASS }}
         script: 'cd /var/www/html'
